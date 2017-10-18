@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Yooz
+Name[fa]=یوز
+Comment=MPV
+Keywords=Internet;WWW;Web;
+Terminal=false
+Type=Application
+Categories=Qt;Network;
+StartupNotify=true
+Exec=yooz 
+Icon=mpv
+StartupWMClass=Yooz
+
