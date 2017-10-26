@@ -21,6 +21,8 @@ from yooz.scripts.mainwindow import MainWindow
 import sys
 from PyQt5.QtWidgets import QApplication
 from PyQt5.QtCore import QSettings
+import struct
+import json
 import os
 import platform
 try:
@@ -57,6 +59,7 @@ args = parser.parse_args()
 # will passed to main window
 # with dict!
 dict = {}
+
 if args.browser != 'no' or args.parent_window:
 
 # Platform specific configuration
@@ -68,7 +71,7 @@ if args.browser != 'no' or args.parent_window:
 
 
     # Send message to browser extension
-    message = '{"enable": true, "version": "1.85"}'.encode('utf-8')
+    message = '{"enable": true, "version": "0.5"}'.encode('utf-8')
     sys.stdout.buffer.write((struct.pack('I', len(message))))
     sys.stdout.buffer.write(message)
     sys.stdout.flush()
